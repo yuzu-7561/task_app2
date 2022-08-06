@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="room-information">
+        <div class="room-content-image">
+            <%= image_tag(rails_blob_path(@room.image)) %>
+        </div>
+        <div class="room-content-detail">
+            <div class="room-detail-icon"> 
+                <%= image_tag(rails_blob_path(@user_image)) if @user_image.attached? %>
+            </div>
+            <div class="room-detail-profile">
+                <%= @room.name %>
+                <%= @room.address %>
+            </div>
+        </div>
+        <div class="room-content-text">
+            <%= @room.introduction %>
+        </div>
+    </div>
+    <div class="room-reserve">
+        予約機能実装待ち
+    </div>
+</div>

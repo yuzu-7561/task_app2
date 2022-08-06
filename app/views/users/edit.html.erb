@@ -1,0 +1,7 @@
+<h4>ユーザー情報編集</h4>
+
+<%= form_with model: @user do |f| %>
+    <%= f.file_field :image %>
+
+    <%= f.submit "編集を完了する" %>
+<% end %>

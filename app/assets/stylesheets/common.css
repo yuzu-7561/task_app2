@@ -63,7 +63,23 @@ footer {
  }
 
 .right-nav {
-    padding-top: 10px; 
+    display: flex;
+    height: 57px;
+    padding-top: 3px;
+}
+
+.right-nav img {
+    border-radius: 50px;
+    width: 57px;
+    height: 57px;
+    object-fit: cover;
+    box-sizing: border-box;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.right-nav p {
+    padding-top: 18px;
 }
 
 .right-nav-login {
@@ -181,4 +197,41 @@ input[type="submit"] {
     background-color: #FF6666;
     color: #fff;
     font-size: 14px;
+}
+
+.room-information img {
+    width: 50%;
+
+}
+
+.room-detail-icon {
+    width: 10%;
+}
+
+#header-nav-menu {
+    background-color: #fff;
+    border: 3px solid #F6F8F9;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 15px;
+    color: black;
+}
+
+#header-nav-menu li {
+    list-style: none;
+    font-size: 16px;
+    padding: 3px 5px;
+}
+
+#header-nav-menu a {
+    color: black;
+}
+
+#header-nav-menu a:hover {
+    color: #35475a;
+}
+
+.hiddn {
+    display: none;
 }
