@@ -1,33 +1,40 @@
-<h4>ルーム情報登録</h4>
-
-<%= form_with model:@room do |f| %>
-
-    <div class="row">
-        <%= f.label :name, "ルーム名" %>
-        <%= f.text_field :name, placeholder: "ルーム名を入力" %>
+<div class="user-container">
+    <div class="user-nav">
+        <ul>
+            <li class="user-view-active-li"><%= link_to "基本情報", new_room_path, class: 'user-view-active-a'%></li>
+        </ul>
     </div>
-
-    <div class="row">
-        <%= f.label :introduction, "ルーム紹介" %>
-        <%= f.text_area :introduction, placeholder: "ルーム説明を入力" %>
+    
+    <div class="user-view">
+        <div class="user-view-box">
+            <h6 class="user-view-title">ルーム情報登録</h6>
+            <%= form_with model:@room do |f| %>
+                <table>
+                    <tr>
+                        <th><%= f.label :name, "ルーム名", class: 'form-require-after' %></th>
+                        <td><%= f.text_field :name, placeholder: "ルーム名を入力" %></td>
+                    </tr>
+                    <tr>
+                        <th><%= f.label :introduction, "ルーム紹介", class: 'form-require-after' %></th>
+                        <td><%= f.text_area :introduction, placeholder: "ルーム説明を入力" %></td>
+                    </tr>
+                    <tr>
+                        <th><%= f.label :price, "料金", class: 'form-require-after' %></th>
+                        <td><%= f.text_field :price, placeholder: "一日あたりの料金を入力" %></td>
+                    </tr>
+                    <tr>
+                        <th><%= f.label :address, "住所", class: 'form-require-after' %></th>
+                        <td><%= f.text_field :address, placeholder: "住所を入力" %></td>
+                    </tr>
+                    <tr>
+                        <th><%= f.label :image, "ルーム画像", class: 'form-require-after' %></th>
+                        <td><%= f.file_field :image %></td>
+                    </tr>
+                </table>
+                <ul class="user-view-btn">
+                    <li><%= f.submit "登録" %></li>
+                </ul>
+            <% end %>
+        </div>
     </div>
-
-    <div class="row">
-        <%= f.label :price, "料金" %>
-        <%= f.text_field :price, placeholder: "一日あたりの料金を入力" %>
-    </div>
-
-    <div class="row">
-        <%= f.label :address, "住所" %>
-        <%= f.text_field :address, placeholder: "住所を入力" %>
-    </div>
-
-    <div class="row">
-        <%= f.label :image, "ルーム画像" %>
-        <%= f.file_field :image %>
-    </div>
-
-    <ul>
-        <li><%= f.submit "登録" %></li>
-    </ul>
-<% end %>
+</div>

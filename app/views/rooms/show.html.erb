@@ -1,22 +1,22 @@
 <div class="container">
-    <div class="room-information">
-        <div class="room-content-image">
+    <div class="room-show-box">
+        <div class="room-information">
             <%= image_tag(rails_blob_path(@room.image)) %>
-        </div>
-        <div class="room-content-detail">
-            <div class="room-detail-icon"> 
-                <%= image_tag(rails_blob_path(@user_image)) if @user_image.attached? %>
+            <div class="room-content-detail">
+                <%if @user_image.attached? %>
+                    <%= image_tag(rails_blob_path(@user_image), class: 'icon-img') %>
+                <% else %>
+                    <img alt="アイコン画像", class="icon-img" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg">
+                <% end %>
+                <div class="room-detail-profile">
+                    <p class="room-show-profile-name"><%= @room.name %></p>
+                    <p class="room-show-profile-address"><%= @room.address %></p>
+                </div>
             </div>
-            <div class="room-detail-profile">
-                <%= @room.name %>
-                <%= @room.address %>
-            </div>
+            <p class="room-introduction"><%= @room.introduction %></p>
         </div>
-        <div class="room-content-text">
-            <%= @room.introduction %>
+        <div class="room-reserve">
+            
         </div>
-    </div>
-    <div class="room-reserve">
-        予約機能実装待ち
     </div>
 </div>

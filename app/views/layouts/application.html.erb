@@ -23,15 +23,15 @@
           <% if user_signed_in? %>
             <p><%= current_user.name %></p>
             <%if current_user.image.attached? %>
-              <%= image_tag(rails_blob_path(current_user.image), id: 'host-icon') %>
+              <%= image_tag(rails_blob_path(current_user.image), id: 'host-icon', class: 'icon-img') %>
             <% else %>
-              <img alt="アイコン画像", id="host-icon" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg">
+              <img alt="アイコン画像", id="host-icon", class="icon-img", src="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg">
             <% end %>
             <ul id="header-nav-menu" class="hiddn">
               <li><%= link_to "ルーム登録", new_room_path %></li>
               <li><%= link_to "予約済みルーム一覧", '#' %></li>
-              <li><%= link_to "登録済みルーム一覧", '#' %></li>
-              <li><%= link_to "設定", '#' %></li>
+              <li><%= link_to "登録済みルーム一覧", rooms_path %></li>
+              <li><%= link_to "設定", users_account_path %></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
             </ul>
           <% else %>

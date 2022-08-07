@@ -1,24 +1,25 @@
 class UsersController < ApplicationController
-    def show
+    before_action :set_user, only: [:profile, :update, :account]
+
+    def account
+        @email = @user.email
     end
 
-    def edit
-        @user = User.find(params[:id])
+    def profile
     end
 
     def update
-        @user = User.find(params[:id])
-    if @user.update(params.require(:user).permit(:name, :introduction, :image))
-      flash[:notice] = "プロフィールを更新しました。"
-      redirect_to controller: :home, action: :top
-    else
-      render "edit"
-    end
+        if @user.update(params.require(:user).permit(:name, :introduction, :image))
+            flash[:notice] = "プロフィールを更新しました。"
+            redirect_to users_profile_path
+        else
+            render "profile"
+        end
     end 
 
-    def users_params
-        params.require(:user).permit(
-          :name, :image
-        )
-      end
+    private
+
+    def set_user
+        @user = current_user
+    end
 end
