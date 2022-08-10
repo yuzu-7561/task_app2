@@ -6,6 +6,7 @@
     </div>
     
     <div class="user-view">
+        <%= render "shared/error", obj: @room %> 
         <div class="user-view-box">
             <h6 class="user-view-title">ルーム情報登録</h6>
             <%= form_with model:@room do |f| %>

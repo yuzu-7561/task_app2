@@ -1,0 +1,48 @@
+<div class="container reservation-new-container">
+    <div class="reservation-new-nav">
+        <%= render "shared/error", obj: @reservation %>
+        <h4>予約内容確認</h4>
+    </div>
+    <div class="reservation-new-box">
+        <%= form_with model:@reservation do |f| %>
+
+        <h5 class="price-icon"><%= @room.price %> / 日</h5>
+            <table>
+                <tr>
+                    <th>開始日</th>
+                    <td><%= @reservation.start_date.strftime('%Y年%m月%d日') %></td>
+                </tr>
+                <tr>
+                    <th>終了日</th>
+                    <td><%= @reservation.end_date.strftime('%Y年%m月%d日') %></td>
+                </tr>
+                <tr>
+                    <th>使用日数</th>
+                    <td><%= @total_days %></td>
+                </tr>
+                <tr>
+                    <th>人数</th>
+                    <td><%= @reservation.num_people %>人</td>
+                </tr>
+                <tr>
+                    <th>合計金額</th>
+                    <td><%= @total_price %></td>
+                </tr>
+            </table>
+
+            <%= f.hidden_field :user_id, value: current_user.id %>
+            <%= f.hidden_field :room_id, value: @reservation.room_id %>
+            <%= f.hidden_field :start_date, value: @reservation.start_date %>
+            <%= f.hidden_field :end_date, value: @reservation.end_date %>
+            <%= f.hidden_field :num_people, value: @reservation.num_people %>
+            <%= f.hidden_field :total_price, value: @total_price %>
+
+            <p>上記でよろしければ「予約を確定」を押してください</p>
+
+            <ul class="user-view-btn">
+                <li><%= f.submit "予約を確定" %></li>
+                <li><%= link_to "ルーム詳細に戻る", room_path(@room.id) %></li>
+            </ul>
+        </div>
+    <% end %>
+</div>
