@@ -169,6 +169,10 @@ input {
     margin-bottom: 10px;
 }
 
+.field_with_errors input {
+    width: 290px;
+}
+
 .form-require::before {
     display: inline-block;
     content: "必須";
