@@ -26,9 +26,21 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
+      room:
+        name: ルーム名
+        introduction: 紹介文
+        price: 料金
+        address: 住所
+        image: 画像
+      reservation:
+        start_date: 開始日
+        end_date: 終了日
+        num_people: 人数
+
     models:
       user: ユーザー
-  devise:
+      room: ルーム
+      devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
       new:
