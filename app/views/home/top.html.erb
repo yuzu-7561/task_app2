@@ -1,9 +1,42 @@
 <div class="top">
     <div class="top-main">
-        <div class="container">
-            <div class="form-flame">
-                <div class="form-area">
-                    <p>Potepan Shareでまだ体験したことのない旅をしよう</p>
+        <div class="top-main-container">
+            <div class="top-form-area">
+                <p>Potepan Shareでまだ体験したことのない旅をしよう</p>
+                <%= form_with url: search_path, method: :get, local: true do |f| %>
+                    <%= f.text_field :keyword, placeholder: "東京" %>
+                    <%= f.submit "探す" %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="recommended-area">
+        <div class="panel-area">
+            <h1>おすすめのエリア</h1>
+            <div class="panel-area-row">
+                <div class="panel">
+                    <%= link_to search_path(keyword: "東京"), method: :get, local: true do %>
+                        <span>東京</span>
+                        <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_tokyo.jpg">
+                    <% end %>
+                </div>
+                <div class="panel">
+                    <%= link_to search_path(keyword: "大阪"), method: :get, local: true do %>
+                        <span>大阪</span>
+                        <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_osaka.jpg">
+                    <% end %>
+                </div>
+                <div class="panel">
+                    <%= link_to search_path(keyword: "京都"), method: :get, local: true do %>
+                        <span>京都</span>
+                        <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_kyoto.jpg">
+                    <% end %>
+                </div>
+                <div class="panel">
+                    <%= link_to search_path(keyword: "札幌"), method: :get, local: true do %>
+                        <span>札幌</span>
+                        <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_sapporo.jpg">
+                    <% end %>
                 </div>
             </div>
         </div>

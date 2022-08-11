@@ -18,6 +18,10 @@
           <a href="/">
             <img alt="サイトのロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
           </a>
+          <%= form_with url: search_path, method: :get, local: true do |f| %>
+            <%= f.text_field :keyword, placeholder: "キーワード" %>
+            <%= f.submit "検索" %>
+          <% end %>
         </div>
         <div class="right-nav">
           <% if user_signed_in? %>

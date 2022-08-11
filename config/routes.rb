@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'users/account', to: 'users#account'
   get 'users/profile', to: 'users#profile'
   resources :reservations
+  get 'search', to: 'rooms#search'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

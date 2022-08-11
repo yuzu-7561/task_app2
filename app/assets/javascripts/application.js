@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("turbolinks:load", function(){
     let icon = document.getElementById('host-icon');
     let menu = document.getElementById('header-nav-menu');
 

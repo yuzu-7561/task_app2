@@ -76,13 +76,29 @@ footer {
  }
 
  .left-nav {
-     height: 100%;
+    height: 100%;
+    display: flex;
+ }
+
+ .left-nav form{
+    margin-top: 12px;
+    height: 100%;
+ }
+
+ .left-nav input {
+     display: inline-block;
+     width: 200px;
  }
 
 .right-nav {
     display: flex;
     height: 57px;
     padding-top: 3px;
+}
+
+.right-nav .btn {
+    height: 24px;
+    margin-top: 8px;
 }
 
 .right-nav img {
@@ -222,6 +238,7 @@ input[type="submit"] {
     right: 10px;
     padding: 15px;
     color: black;
+    z-index: 100;
 }
 
 #header-nav-menu li {
@@ -240,8 +257,6 @@ input[type="submit"] {
 .hiddn {
     display: none;
 }
-
-/* プロフィール画面とユーザーアカウント画面 */
 
 .user-container {
     display: flex;
@@ -643,4 +658,168 @@ input[type=checkbox] {
 
 .reservations-show-container .user-view-box {
     background-color: #F6F8F9;
+}
+
+.room-search-container {
+    padding: 30px 60px 100px 60px;
+}
+
+.room-search-container h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.room-search-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+}
+
+.panel-area-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-frame {
+    padding: 0 15px;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.room-frame-inner {
+    border: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+}
+
+.room-frame-inner-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #F6F8F9;
+}
+
+.room-frame-inner-image img {
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    object-fit: cover;
+}
+
+.left-nav form {
+    display: flex;
+}
+
+.left-nav input[type=submit] {
+    margin: 0 0 0 10px;
+    width: 80px;
+}
+
+.room-profile {
+    text-align: left;
+    padding: 15px;
+}
+
+.room-profile p {
+    margin-bottom: 10px;
+}
+
+.room-profile-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #909090;
+}
+
+.room-profile-address {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.room-profile-price {
+    text-align: right;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.recommended-area {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.recommended-area h1 {
+    margin-top: 0;
+    font-size: 24px;
+    margin: 35px 0;
+}
+.panel-area {
+    margin: 3rem;
+    box-sizing: border-box;
+}
+
+.panel {
+    width: 23%;
+    position: relative;
+}
+
+.panel img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.panel span {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-weight: bold;
+    margin: auto;
+    font-size: 24px;
+    text-align: center;
+}
+
+.top-main-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.top-form-area {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 5px;
+    width: 40%;
+    position: absolute;
+    top: 180px;
+}
+
+.top-form-area p {
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.top-form-area form {
+    margin: 0;
+    width: 100%;
+}
+
+.top-form-area form input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+.erroe-message {
+    color: red;
 }
