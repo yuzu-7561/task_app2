@@ -14,9 +14,11 @@ class ReservationsController < ApplicationController
   end
 
   def new
+    @user_image = @reservation.room.user.image
     @user_id = current_user.id
-    @total_days = (@reservation.end_date - @reservation.start_date).to_i + 1
+    @total_days = (@reservation.end_date - @reservation.start_date).to_i
     @total_price = @room.price * @reservation.num_people * @total_days
+    render "rooms/show" if @reservation.invalid?
   end
 
   def create

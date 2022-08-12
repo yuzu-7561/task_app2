@@ -1,4 +1,5 @@
 <div class="container">
+    <%= render "shared/error", obj: @reservation %>
     <div class="room-show-box">
         <div class="room-information">
             <%= image_tag(rails_blob_path(@room.image)) %>

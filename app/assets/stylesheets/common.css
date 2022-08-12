@@ -827,3 +827,11 @@ input[type=checkbox] {
 .erroe-message {
     color: red;
 }
+
+#reservation_start_date, #reservation_num_people, #reservation_end_date {
+    width: 100%;
+}
+
+.container .erroe-message {
+    margin-top: 0;
+}
