@@ -658,10 +658,19 @@ input[type=checkbox] {
 
 .reservations-show-container {
     margin-top: 75px;
+    padding-bottom: 150px;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .reservations-show-container .user-view-box {
     background-color: #F6F8F9;
+}
+
+.reservations-show-container ul {
+    text-align: center;
+    padding: 0;
 }
 
 .room-search-container {
