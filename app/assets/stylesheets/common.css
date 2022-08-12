@@ -1,0 +1,846 @@
+body {
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    color: #333;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+p {
+    margin: 0;
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    margin: 0;
+}
+
+header {
+    height: 70px;
+}
+
+footer {
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 30px;
+}
+
+#error_explanation ul {
+    margin: 0 0 24px 0;
+    text-align: left;
+    color: red;
+    font-size: 14px;
+}
+
+.btn {
+    color: #fff;
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+ a {
+     text-decoration: none;
+     text-align: center;
+     border-radius: .25rem;
+     vertical-align: middle;
+     color: #000;
+ }
+
+ li {
+    list-style: none;
+ }
+
+ .icon-img {
+     border-radius: 50%;
+     object-fit: cover;
+ }
+
+ .left-nav {
+    height: 100%;
+    display: flex;
+ }
+
+ .left-nav form{
+    margin-top: 12px;
+    height: 100%;
+ }
+
+ .left-nav input {
+     display: inline-block;
+     width: 200px;
+ }
+
+.right-nav {
+    display: flex;
+    height: 57px;
+    padding-top: 3px;
+}
+
+.right-nav .btn {
+    height: 24px;
+    margin-top: 8px;
+}
+
+.right-nav img {
+    width: 57px;
+    height: 57px;
+    box-sizing: border-box;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.right-nav p {
+    padding-top: 18px;
+}
+
+.right-nav-login {
+    background-color: #4a90e2;
+    margin-right: 1rem;
+}
+
+.right-nav-registration {
+    background-color: #6c757d;
+    transition: 0.3s;
+}
+
+.right-nav-registration:hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+    transition: 0.3s;
+}
+
+.devise-container {
+    text-align: center;
+    padding-top: 36px;
+    margin: 0 auto;
+}
+
+.devise-container p {
+    font-size: 16px;
+    margin: 24px 0;
+}
+
+.devise-container a {
+    color: #007bff;
+}
+
+.devise-inner {
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: rgb(21 27 38 / 15%) 0px 1px 3px 0px;
+}
+
+form {
+    width: 360px;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    height: 24px;
+    padding: 6px 8px;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-bottom: 10px;
+}
+
+.field_with_errors input {
+    width: 290px;
+}
+
+.form-require::before {
+    display: inline-block;
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 3px 4px;
+    margin: 0 5px;
+    width: 24px;
+    margin-top: 6px;
+}
+
+.form-require {
+    padding: 0 5px;
+}
+
+.field {
+    display: flex;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 24px 0;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 16px;
+    height: 38px;
+    cursor: pointer;
+    border-color: #007bff;
+}
+
+.field input:focus {
+    outline: solid 3px #BAD3FF;
+    border-color: #75A9FF;
+    transition: 0.1s;
+}
+
+.field input {
+    transition: 0.3s;
+}
+
+.top-main {
+    background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+}
+
+.form-area {
+    background-color: #fff;
+}
+
+.alert {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #FF6666;
+    color: #fff;
+    font-size: 14px;
+}
+
+#header-nav-menu {
+    background-color: #fff;
+    border: 3px solid #F6F8F9;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 15px;
+    color: black;
+    z-index: 100;
+}
+
+#header-nav-menu li {
+    font-size: 16px;
+    padding: 3px 5px;
+}
+
+#header-nav-menu a {
+    color: black;
+}
+
+#header-nav-menu a:hover {
+    color: #35475a;
+}
+
+.hiddn {
+    display: none;
+}
+
+.user-container {
+    display: flex;
+}
+
+.user-nav {
+    padding: 30px 15px 30px 0;
+    height: 100vh;
+    width: 18%;
+}
+
+.user-nav li {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.user-nav ul {
+    line-height: 18px;
+    margin-top: 0;
+}
+
+.user-view {
+    border-left: 2px solid #e2e2e2;
+    background-color: #F6F8F9;
+    width: 100%;
+}
+
+.user-view-box {
+    max-width: 880px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 30px auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.user-view-box h6 {
+    font-size: 1.25rem;
+    margin: 20px 0;
+    font-weight: normal;
+}
+
+.form-require-after::after {
+    display: inline-block;
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 3px 4px;
+    margin: 0 5px;
+    width: 24px;
+}
+
+.user-view-box form {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.user-view-box input[type="submit"] {
+    width: 140px;
+    margin: 40px auto;
+}
+
+.user-view-box input[type="file"] {
+    border: none;
+}
+
+.user-view-box .icon-img, .room-information .icon-img {
+    width: 65px;
+    height: 65px;
+}
+
+.icon-box {
+  padding: 20px 0 15px 0;  
+  border-top: 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+}
+
+.user-view-box table {
+    width: 100%;
+}
+
+.user-view-box tr {
+    padding-top: 20px;
+    height: 100px;
+}
+
+.user-view-box th {
+    width: 200px;
+    text-align: left;
+}
+
+.user-view-box textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ced4da
+}
+
+.user-view-btn {
+    border-top: 1px solid #eaedef;
+    margin-top: 30px;
+}
+
+.notice {
+    background-color:#3CB371;
+    color: #fff;
+}
+
+.user-view-active-a {
+    color: #4a90e2;
+}
+
+.user-view-active-li {
+    border-right: 3px solid #4a90e2;
+}
+
+.user-edit-btn {
+    margin: 24px auto;
+    background-color: #4a90e2;
+    border-radius: 0.25em;
+    font-size: 16px;
+    height: 30px;
+    width: 140px;
+    cursor: pointer;
+    border-color: #007bff;
+    vertical-align: middle;
+    padding: 6px;
+}
+
+.user-edit-btn a {
+    color: #fff;
+}
+
+.user-view-title-account {
+    border-bottom: 1px solid #eaedef;
+    padding-bottom: 20px;
+}
+
+.account-table td {
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.account-table tr {
+    height: 80px;
+}
+
+.user-view-title {
+    border-bottom: 1px solid #eaedef;
+    padding-bottom: 20px;
+}
+
+input[type=checkbox] {
+    width: 30px
+}
+
+.edit-user-form .field {
+    display: block;
+    font-size: 1rem;
+}
+
+.edit-user-form input {
+    margin-top: 5px;
+}
+
+.edit-user-form input[type=submit] {
+    margin-top: 30px;
+}
+
+.rooms-container h4, .reservations-container h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.rooms-container, .reservations-container {
+    max-width: 100vw;
+    padding: 30px 60px;
+}
+
+.rooms-table img, .reservations-table img {
+    width: 240px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.reservations-table th {
+    border-bottom: 1px solid rgb(241, 238, 238);
+}
+
+.rooms-container td, .reservations-container td {
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+.rooms-container th, .reservations-container th {
+    padding: 8px 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.rooms-container tr, .reservations-container {
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+}
+
+.rooms-container tr:nth-child(even), .reservations-container tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.rooms-container {
+    margin-bottom: 80px;
+}
+
+.room-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.room-name a {
+    color: #4a90e2;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.room-content {
+    max-width: 400px;
+}
+
+.room-price::before {
+    content: "¥";
+    padding-right: 3px;
+}
+
+/* ルーム詳細＆予約画面 */
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 30px 0 140px 0;
+}
+
+.room-show-box {
+    display: flex;
+}
+
+.room-information {
+    width: 65%;
+    padding: 0 15px;
+}
+
+.room-information img {
+    width: 100%;
+}
+
+.room-information .icon-img {
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.room-content-detail {
+    display: flex;
+}
+
+.room-show-profile-name {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 0 16px 0;
+}
+
+.room-show-profile-address {
+    font-size: 14px;
+    margin: 0 0 16px 0;
+}
+
+.room-detail-profile {
+    padding: 15px;
+}
+
+.room-introduction {
+    padding: 30px 10px;
+    line-height: 30px;
+    font-size: 16px;
+    border-bottom: 1px solid #eaedef;
+    border-top: 1px solid #eaedef;
+}
+
+.room-reserve-box {
+    padding:0 15px;
+}
+
+.room-reserve-detail {
+    padding: 20px;
+    border: 1px solid #eaedef;
+}
+
+.price-icon {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.price-icon::before {
+    content: "¥";
+    padding-right: 4px;
+}
+
+.room-reserve-detail-select input {
+    box-sizing: border-box;
+    padding: 6px 12px;
+    margin-bottom: 24px;
+    margin-top: 8px;
+    height: 40px;
+}
+
+.room-reserve-detail-select {
+    padding: 15px 0;
+}
+
+.room-reserve-detail-select ul {
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.room-reserve-detail-select input[type=submit] {
+    margin-bottom: 0;
+}
+
+.reservation-container {
+    background-color: #F6F8F9;
+    height: 400px;
+    padding-top: 100px;
+    vertical-align: middle;
+}
+
+.reservation-container .user-view-box {
+    margin: auto;
+}
+
+.reservation-container table {
+    border-collapse: collapse;
+}
+
+.reservation-container tr {
+    padding: 0;
+    height: 64px;
+    border-bottom: 1px solid #eaedef;
+}
+
+.reservation-container tr:last-of-type {
+    border-bottom: none;
+}
+
+.reservation-container td {
+    width: 60%;
+    text-align: left;
+}
+
+.reservation-new-container {
+    width: 50%;
+}
+
+.reservation-new-container h4 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.reservation-new-box form {
+    width: 400px;
+}
+
+.reservation-new-box table{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.reservation-new-box table th {
+    font-weight: normal;
+    text-align: left;
+}
+
+.reservation-new-box ul {
+    padding:0 20px;
+}
+
+.reservations-show-container {
+    margin-top: 75px;
+    padding-bottom: 150px;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reservations-show-container .user-view-box {
+    background-color: #F6F8F9;
+}
+
+.reservations-show-container ul {
+    text-align: center;
+    padding: 0;
+}
+
+.room-search-container {
+    padding: 30px 60px 100px 60px;
+}
+
+.room-search-container h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.room-search-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+}
+
+.panel-area-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-frame {
+    padding: 0 15px;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.room-frame-inner {
+    border: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+}
+
+.room-frame-inner-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #F6F8F9;
+}
+
+.room-frame-inner-image img {
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    object-fit: cover;
+}
+
+.left-nav form {
+    display: flex;
+}
+
+.left-nav input[type=submit] {
+    margin: 0 0 0 10px;
+    width: 80px;
+}
+
+.room-profile {
+    text-align: left;
+    padding: 15px;
+}
+
+.room-profile p {
+    margin-bottom: 10px;
+}
+
+.room-profile-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #909090;
+}
+
+.room-profile-address {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.room-profile-price {
+    text-align: right;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.recommended-area {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.recommended-area h1 {
+    margin-top: 0;
+    font-size: 24px;
+    margin: 35px 0;
+}
+.panel-area {
+    margin: 3rem;
+    box-sizing: border-box;
+}
+
+.panel {
+    width: 23%;
+    position: relative;
+}
+
+.panel img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.panel span {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-weight: bold;
+    margin: auto;
+    font-size: 24px;
+    text-align: center;
+}
+
+.top-main-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.top-form-area {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 5px;
+    width: 40%;
+    position: absolute;
+    top: 180px;
+}
+
+.top-form-area p {
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.top-form-area form {
+    margin: 0;
+    width: 100%;
+}
+
+.top-form-area form input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+.erroe-message {
+    color: red;
+}
+
+#reservation_start_date, #reservation_num_people, #reservation_end_date {
+    width: 100%;
+}
+
+.container .erroe-message {
+    margin-top: 0;
+}

@@ -1,0 +1,45 @@
+<div class="container">
+    <%= render "shared/error", obj: @reservation %>
+    <div class="room-show-box">
+        <div class="room-information">
+            <%= image_tag(rails_blob_path(@room.image)) %>
+            <div class="room-content-detail">
+                <%if @user_image.attached? %>
+                    <%= image_tag(rails_blob_path(@user_image), class: 'icon-img') %>
+                <% else %>
+                    <img alt="アイコン画像", class="icon-img" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg">
+                <% end %>
+                <div class="room-detail-profile">
+                    <p class="room-show-profile-name"><%= @room.name %></p>
+                    <p class="room-show-profile-address"><%= @room.address %></p>
+                </div>
+            </div>
+            <p class="room-introduction"><%= @room.introduction %></p>
+        </div>
+        <div class="room-reserve-box">
+            <div class="room-reserve-detail">
+                <h5 class="price-icon"><%= @room.price %> / 日</h5>
+                <div class="room-reserve-detail-select">
+                    <%= form_with model: @reservation, method: :get, url: new_reservation_path do |f| %>
+
+                        <%= f.hidden_field :user_id, value: @user_id %>
+                        <%= f.hidden_field :room_id, value: @room.id %>
+
+                        <%= f.label :start_date, "開始日" %>
+                        <%= f.date_field :start_date, placeholder: "年/月/日" %>
+
+                        <%= f.label :end_date, "終了日" %>
+                        <%= f.date_field :end_date, placeholder: "年/月/日" %>
+                        
+                        <%= f.label :num_people, "人数" %>
+                        <%= f.number_field :num_people %>
+
+                        <ul class="user-view-btn">
+                            <li><%= f.submit "予約する" %></li>
+                        </ul>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
